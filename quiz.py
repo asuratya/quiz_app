@@ -94,12 +94,12 @@ options = [
     [ans[1],'Lithium','Uranium','adamantium']
     ]
 
-#######################################33
-currentQ =''
+#######################################
+currentQ ='' #current question
 q_number=None
-currentA=''
+currentA='' #current answer
 score = 0
-qn = 1  #for printing no of question finished
+qn = 1  #for printing No of question 
 var = StringVar()
 
 #############function to get to the next question############
@@ -148,7 +148,7 @@ appName.pack(side=TOP,fill=BOTH)
 #label to show current question    
 queLabel = Label(root,text='',justify=LEFT,font=25)
 queLabel.pack(side=TOP,fill=BOTH)
-#s = Separator(root).place(x=0,y=195,relwidth=1)
+#s = Separator(root).place(x=0,y=195)
 #options labels
 option1=Radiobutton(root,text='',bg='black',font=20,width=20,relief=FLAT,
                     indicator=0,value=1,variable = var,bd=0)
