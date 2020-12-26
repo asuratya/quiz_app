@@ -7,6 +7,18 @@ class QuizQuestion():
         self._answers = answers
         self._correct_answer = c_answer
 
+    def getQ(self): #new in my version
+        return self._question
+    
+    def getA(self): #new in my version
+        s = []
+        for index in range(len(self._answers)):
+            s.append(str(index+1) + ") " + self._answers[index])
+        return s
+
+    def getCorrectA(self):
+        return self._answers[self._correct_answer]
+
     def __str__(self):
         s = self._question + "\n"
         for index in range(len(self._answers)):
@@ -15,9 +27,3 @@ class QuizQuestion():
 
     def IsCorrectA(self, A): # A is index of answer in list
         return A == self._correct_answer
-
-# testing the new class:
-#c = QuizQuestion("What is Robins age?", ["19","22","25","109"],1)
-#print(c)
-#print(c.IsCorrectA(3))
-#print(c.IsCorrectA(1))
