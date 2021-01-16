@@ -59,7 +59,7 @@ def enable_allbuttons():
           
 ######################## show the final result#########################
 def result():
-    global score,Name,Roll
+    global score,Name
     root.withdraw()
     top = Toplevel(root)
     top.geometry('200x100')

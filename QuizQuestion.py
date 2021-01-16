@@ -1,13 +1,22 @@
 # method to display the question/possible answers and method checkifcorrect(answer)
 class QuizQuestion():
     # question is a str, answers is list of str, correct_answer is index of correct answer
-    def __init__(self, question, answers, c_answer): 
+    def __init__(self, question, answer,answers_list): 
         # private attributes!
         self._question = question
-        self._answers = answers
-        self._correct_answer = c_answer
+        self._answer = answer
+        self._answers_list =answers_list
 
-    def getQ(self): #new in my version
+    def getQuestion(self): #new in my version
+        return self._question
+    
+    def getAnswer(self):
+        return self._answer
+    
+    def getAnswersList(self):
+        return self._answers_list
+
+    '''def getQ(self): #new in my version
         return self._question
     
     def getA(self): #new in my version
@@ -26,4 +35,4 @@ class QuizQuestion():
         return s
 
     def IsCorrectA(self, A): # A is index of answer in list
-        return A == self._correct_answer
+        return A == self._correct_answer'''
